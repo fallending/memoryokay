@@ -33,7 +33,10 @@ If you later add analytics, crash reporting, or accounts, update both the questi
 
 ## Enable GitHub Pages
 
-1. Push this folder’s git repo to `git@github.com:fallending/memoryokay.git` (or your org’s equivalent).
-2. GitHub → **Settings** → **Pages**
-3. Source: **Deploy from a branch** → `main` → `/ (root)` → Save
-4. Wait 1–2 minutes, open the Privacy & Support URLs in a browser, then paste into Connect
+Newer GitHub often only offers **GitHub Actions** (branch deploy may be missing). Prefer Actions:
+
+1. Settings → **Pages** → **Build and deployment** → **Source** → **GitHub Actions**
+2. Keep `.github/workflows/pages.yml` on `main` and push (or re-run under **Actions**)
+3. When the workflow is green, open privacy/support URLs, then paste into Connect
+
+If **Deploy from a branch** is available: `main` → `/ (root)` → Save.
